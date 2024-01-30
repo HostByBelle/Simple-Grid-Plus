@@ -26,3 +26,4 @@ jobs:
         with:
           name: build
           path: ./build/dist/*.css
+          if-no-files-found: error
