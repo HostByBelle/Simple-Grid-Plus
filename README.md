@@ -28,16 +28,14 @@ All the code you need is simple and familiar. A parent container class contains 
 </div>
 ```
 
-To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`).
-Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6-md`).
+To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`, `.col-3-xlg`).
+If you don't specify a breakpoint, the column will apply to all screen sizes.
+You may also us `col` to have the columns automatically adjust their size. When using `col`, you may have any arbitrary number of columns.
 
 ### Utility
 
-- `left`: Aligns content to the left.
-- `right`: Aligns content to the right.
-- `center`: Centers content.
-- `justify`: Applies the "justify" content alignment.
-- `hidden-sm`
+Simple Grid+ provides placement classes much like bootstrap. These include margin, padding, and gap.
+Examples: `gap-3`, `m-2`, `p-3`, `mr-2`.
 
 ### Breakpoints
 
