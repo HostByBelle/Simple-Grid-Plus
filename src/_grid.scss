@@ -32,60 +32,20 @@
   clear: both;
 }
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  width: $width;
-}
-
-.col-1-sm { width:math.div($width, 12) - math.div($gutter * 11, 12); }
-.col-2-sm { width: math.div($width, 6) - math.div($gutter * 10, 12); }
-.col-3-sm { width: ($width * 0.25) - math.div($gutter * 9, 12); }
-.col-4-sm { width: math.div($width, 3) - math.div($gutter * 8, 12); }
-.col-5-sm { width: math.div($width, (12 * 0.2)) - math.div($gutter * 7, 12); }
-.col-6-sm { width: ($width * 0.5) - math.div($gutter * 6, 12); }
-.col-7-sm { width: math.div($width, math.div(12, 7)) - math.div($gutter * 5, 12); }
-.col-8-sm { width: math.div($width, (12 * 0.125)) - math.div($gutter * 4, 12); }
-.col-9-sm { width: math.div($width, math.div(12, 9)) - math.div($gutter * 3, 12); }
-.col-10-sm { width: math.div($width, (12 * 0.1)) - math.div($gutter * 2, 12); }
-.col-11-sm { width: math.div($width, math.div(12, 11)) - math.div($gutter * 1, 12); }
-.col-12-sm { width: $width; }
-
 @media only screen and (min-width: $breakpoint-med) {
-  .col-1, .col-1-md { width:math.div($width, 12) - math.div($gutter * 11, 12); }
-  .col-2, .col-2-md { width: math.div($width, 6) - math.div($gutter * 10, 12); }
-  .col-3, .col-3-md { width: ($width * 0.25) - math.div($gutter * 9, 12); }
-  .col-4, .col-4-md { width: math.div($width, 3) - math.div($gutter * 8, 12); }
-  .col-5, .col-5-md { width: math.div($width, (12 * 0.2)) - math.div($gutter * 7, 12); }
-  .col-6, .col-6-md { width: ($width * 0.5) - math.div($gutter * 6, 12); }
-  .col-7, .col-7-md { width: math.div($width, math.div(12, 7)) - math.div($gutter * 5, 12); }
-  .col-8, .col-8-md { width: math.div($width, (12 * 0.125)) - math.div($gutter * 4, 12); }
-  .col-9, .col-9-md { width: math.div($width, math.div(12, 9)) - math.div($gutter * 3, 12); }
-  .col-10, .col-10-md { width: math.div($width, (12 * 0.1)) - math.div($gutter * 2, 12); }
-  .col-11, .col-11-md { width: math.div($width, math.div(12, 11)) - math.div($gutter * 1, 12); }
-  .col-12, .col-12-md { width: $width; }
+  @for $i from 1 through $columns {
+
+    .col-#{$i},
+    .col-#{$i}-md {
+      width: calc($width / $columns * $i - $gutter);
+    }
+  }
 }
 
 @media only screen and (min-width: $breakpoint-large) {
-  .col-1-lg { width:math.div($width, 12) - math.div($gutter * 11, 12); }
-  .col-2-lg { width: math.div($width, 6) - math.div($gutter * 10, 12); }
-  .col-3-lg { width: ($width * 0.25) - math.div($gutter * 9, 12); }
-  .col-4-lg { width: math.div($width, 3) - math.div($gutter * 8, 12); }
-  .col-5-lg { width: math.div($width, (12 * 0.2)) - math.div($gutter * 7, 12); }
-  .col-6-lg { width: ($width * 0.5) - math.div($gutter * 6, 12); }
-  .col-7-lg { width: math.div($width, math.div(12, 7)) - math.div($gutter * 5, 12); }
-  .col-8-lg { width: math.div($width, (12 * 0.125)) - math.div($gutter * 4, 12); }
-  .col-9-lg { width: math.div($width, math.div(12, 9)) - math.div($gutter * 3, 12); }
-  .col-10-lg { width: math.div($width, (12 * 0.1)) - math.div($gutter * 2, 12); }
-  .col-11-lg { width: math.div($width, math.div(12, 11)) - math.div($gutter * 1, 12); }
-  .col-12-lg { width: $width; }
+  @for $i from 1 through $columns {
+    .col-#{$i}-lg {
+      width: calc($width / $columns * $i - $gutter);
+    }
+  }
 }
