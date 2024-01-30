@@ -1,6 +1,6 @@
 # Simple Grid+
 
-Lightweight and responsive CSS grid & utility components for easier front-end development. Optionally includes typography as well.
+Lightweight (~2KB uncompressed) and responsive CSS grid & utility components for easier front-end development. Optionally includes typography as well.
 
 Based on [Simple Grid](https://github.com/zachacole/Simple-Grid) originally created by Zach Cole.
 
