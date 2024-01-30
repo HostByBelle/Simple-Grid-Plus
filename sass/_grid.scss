@@ -33,22 +33,45 @@
   clear: both;
 }
 
+/* Columns for all screen sizes */
 @for $i from 1 through $columns {
   .col-#{$i} {
-    width: $width;
+    width: calc($width / $columns * $i - $gutter);
   }
 }
 
+/* Columns for the small breakpoint */
+@media only screen and (min-width: $breakpoint-small) {
+  @for $i from 1 through $columns {
+    .col-#{$i}-sm {
+      width: calc($width / $columns * $i - $gutter);
+    }
+  }
+}
+
+/* Columns for the medium breakpoint */
 @media only screen and (min-width: $breakpoint-med) {
   @for $i from 1 through $columns {
-
-    .col-#{$i},
     .col-#{$i}-md {
       width: calc($width / $columns * $i - $gutter);
     }
+  }
+}
 
-    .hidden-sm {
-      display: block;
+/* Columns for the large breakpoint */
+@media only screen and (min-width: $breakpoint-large) {
+  @for $i from 1 through $columns {
+    .col-#{$i}-lg {
+      width: calc($width / $columns * $i - $gutter);
+    }
+  }
+}
+
+/* Columns for the extra large breakpoint */
+@media only screen and (min-width: $breakpoint-xlarge) {
+  @for $i from 1 through $columns {
+    .col-#{$i}-xlg {
+      width: calc($width / $columns * $i - $gutter);
     }
   }
 }

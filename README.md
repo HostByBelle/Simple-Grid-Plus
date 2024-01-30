@@ -41,9 +41,11 @@ Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6
 
 ### Breakpoints
 
-- `sm`: 33.75em; // 540px
-- `md`: 45em; // 720px
-- `lg`: 60em; // 960px
+- `xsm`: Anything smaller than the `sm` breakpoint.
+- `sm`: `33.75em` (540px).
+- `md`: `45em` (720px).
+- `lg`: `60em` (960px).
+- `xlg`: `75em` (1200px).
 
 ### Typography
 
