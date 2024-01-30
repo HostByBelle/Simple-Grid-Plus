@@ -20,3 +20,9 @@ jobs:
       - run: npm i
 
       - run: npm run build
+
+      - name: Upload CSS Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: ./dist/*.css
