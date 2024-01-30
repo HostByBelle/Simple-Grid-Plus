@@ -38,6 +38,10 @@
   box-sizing: border-box;
 }
 
+.col {
+  flex: 1;
+}
+
 /* Columns for all screen sizes */
 @include generate-columns("col");
 
