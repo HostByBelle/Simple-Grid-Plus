@@ -1,6 +1,6 @@
 # Simple Grid+
 
-Lightweight (~2KB uncompressed) and responsive CSS grid & utility components for easier front-end development. Optionally includes typography as well.
+Lightweight (less than 5KB uncompressed) and responsive CSS grid & utility components for easier front-end development.
 
 Based on [Simple Grid](https://github.com/zachacole/Simple-Grid) originally created by Zach Cole.
 
@@ -28,26 +28,27 @@ All the code you need is simple and familiar. A parent container class contains 
 </div>
 ```
 
-To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`).
-Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6-md`).
+To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`, `.col-3-xlg`).
+If you don't specify a breakpoint, the column will apply to all screen sizes.
+You may also us `col` to have the columns automatically adjust their size. When using `col`, you may have any arbitrary number of columns.
 
 ### Utility
 
-- `left`: Aligns content to the left.
-- `right`: Aligns content to the right.
-- `center`: Centers content.
-- `justify`: Applies the "justify" content alignment.
-- `hidden-sm`
+Simple Grid+ provides placement classes much like bootstrap. These include margin, padding, and gap.
+Examples: `gap-3`, `m-2`, `p-3`, `mr-2`.
 
 ### Breakpoints
 
-- `sm`: 33.75em; // 540px
-- `md`: 45em; // 720px
-- `lg`: 60em; // 960px
+- `xsm`: Anything smaller than the `sm` breakpoint.
+- `sm`: `33.75em` (540px).
+- `md`: `45em` (720px).
+- `lg`: `60em` (960px).
+- `xlg`: `75em` (1200px).
 
 ### Typography
 
 Note: typography is not included in the default Simple Gride+ CSS files and must be included seperately.
+It may also be removed or seperated from the Simple Grid+ project in the future.
 
 - `font-light`
 - `font-regular`

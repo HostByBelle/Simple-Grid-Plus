@@ -1,22 +1,68 @@
 /* Utility */
-.left {
-    text-align: left;
+// Gap Classes
+$gap-values: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+);
+
+@each $key, $value in $gap-values {
+    .gap-#{$key} {
+        gap: $value;
+    }
 }
 
-.right {
-    text-align: right;
-}
+// Margin and Padding Classes
+$spacing-values: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+);
 
-.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+@each $key, $value in $spacing-values {
+    .m-#{$key} {
+        margin: $value;
+    }
 
-.justify {
-    text-align: justify;
-}
+    .mt-#{$key} {
+        margin-top: $value;
+    }
 
-.hidden-sm {
-    display: none;
+    .mb-#{$key} {
+        margin-bottom: $value;
+    }
+
+    .ml-#{$key} {
+        margin-left: $value;
+    }
+
+    .mr-#{$key} {
+        margin-right: $value;
+    }
+
+    .p-#{$key} {
+        padding: $value;
+    }
+
+    .pt-#{$key} {
+        padding-top: $value;
+    }
+
+    .pb-#{$key} {
+        padding-bottom: $value;
+    }
+
+    .pl-#{$key} {
+        padding-left: $value;
+    }
+
+    .pr-#{$key} {
+        padding-right: $value;
+    }
 }
