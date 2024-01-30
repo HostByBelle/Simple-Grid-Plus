@@ -10,7 +10,6 @@
   @for $i from 1 through $columns {
     .#{$prefix}-#{$i}#{$breakpoint} {
       flex: 0 0 generate-width($columns, $i);
-      max-width: generate-width($columns, $i);
     }
   }
 }
@@ -32,8 +31,6 @@
 }
 
 .row [class^="col-"] {
-  margin: 0;
-  padding: 0;
   min-height: 0.125em;
   box-sizing: border-box;
 }
