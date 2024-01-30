@@ -1,6 +1,6 @@
 # Simple Grid+
 
-Lightweight (~2KB uncompressed) and responsive CSS grid & utility components for easier front-end development. Optionally includes typography as well.
+Lightweight (less than 5KB uncompressed) and responsive CSS grid & utility components for easier front-end development.
 
 Based on [Simple Grid](https://github.com/zachacole/Simple-Grid) originally created by Zach Cole.
 
@@ -48,6 +48,7 @@ Examples: `gap-3`, `m-2`, `p-3`, `mr-2`.
 ### Typography
 
 Note: typography is not included in the default Simple Gride+ CSS files and must be included seperately.
+It may also be removed or seperated from the Simple Grid+ project in the future.
 
 - `font-light`
 - `font-regular`
