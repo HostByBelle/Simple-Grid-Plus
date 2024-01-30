@@ -4,7 +4,9 @@ Lightweight (~2KB uncompressed) and responsive CSS grid & utility components for
 
 Based on [Simple Grid](https://github.com/zachacole/Simple-Grid) originally created by Zach Cole.
 
-## Grid
+## Components
+
+### Grid
 
 Simple Grid+ is a mobile-first 12-column CSS grid system to make developing responsive websites easy and fast.
 
@@ -29,7 +31,7 @@ All the code you need is simple and familiar. A parent container class contains 
 To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`).
 Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6-md`).
 
-## Utility
+### Utility
 
 - `left`: Aligns content to the left.
 - `right`: Aligns content to the right.
@@ -38,14 +40,22 @@ Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6
 - `hidden-sm`
 - `hidden-md`
 
-## Typography
+### Breakpoints
+
+- `sm`: 33.75em; // 540px
+- `md`: 45em; // 720px
+- `lg`: 60em; // 960px
+n
+
+### Typography
+
+Note: typography is not included in the default Simple Gride+ CSS files and must be included seperately.
 
 - `font-light`
 - `font-regular`
 - `font-heavy`
 
-## Breakpoints
+## Building
 
-- `sm`: 33.75em; // 540px
-- `md`: 45em; // 720px
-- `lg`: 60em; // 960px
+1. `npm i`
+2. `npm run build`
