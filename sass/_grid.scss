@@ -1,77 +1,59 @@
 @use "sass:math";
 
+// Function for generating column styles
+@function generate-width($columns, $i) {
+  @return percentage(math.div($i, $columns));
+}
+
+// Mixin for generating column styles
+@mixin generate-columns($prefix, $breakpoint: null) {
+  @for $i from 1 through $columns {
+    .#{$prefix}-#{$i}#{$breakpoint} {
+      flex: 0 0 generate-width($columns, $i);
+      max-width: generate-width($columns, $i);
+    }
+  }
+}
+
 /* Grid */
 .container {
-  width: 90%;
   margin-left: auto;
   margin-right: auto;
-
-  @media only screen and (min-width: $breakpoint-small) {
-    width: 80%;
-  }
-
-  @media only screen and (min-width: $breakpoint-large) {
-    width: 75%;
-    max-width: 60rem;
-  }
+  display: block;
 }
 
 .row {
+  margin: 0;
+  padding: 0;
   position: relative;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .row [class^="col-"] {
-  float: left;
-  margin: 0.5rem math.div($gutter, 2);
-  min-height: 0.125rem;
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+  margin: 0;
+  padding: 0;
+  min-height: 0.125em;
+  box-sizing: border-box;
 }
 
 /* Columns for all screen sizes */
-@for $i from 1 through $columns {
-  .col-#{$i} {
-    width: calc($width / $columns * $i - $gutter);
-  }
-}
+@include generate-columns("col");
 
-/* Columns for the small breakpoint */
+/* Columns for different breakpoints */
 @media only screen and (min-width: $breakpoint-small) {
-  @for $i from 1 through $columns {
-    .col-#{$i}-sm {
-      width: calc($width / $columns * $i - $gutter);
-    }
-  }
+  @include generate-columns("col", "-sm");
 }
 
-/* Columns for the medium breakpoint */
 @media only screen and (min-width: $breakpoint-med) {
-  @for $i from 1 through $columns {
-    .col-#{$i}-md {
-      width: calc($width / $columns * $i - $gutter);
-    }
-  }
+  @include generate-columns("col", "-md");
 }
 
-/* Columns for the large breakpoint */
 @media only screen and (min-width: $breakpoint-large) {
-  @for $i from 1 through $columns {
-    .col-#{$i}-lg {
-      width: calc($width / $columns * $i - $gutter);
-    }
-  }
+  @include generate-columns("col", "-lg");
 }
 
-/* Columns for the extra large breakpoint */
 @media only screen and (min-width: $breakpoint-xlarge) {
-  @for $i from 1 through $columns {
-    .col-#{$i}-xlg {
-      width: calc($width / $columns * $i - $gutter);
-    }
-  }
+  @include generate-columns("col", "-xlg");
 }
