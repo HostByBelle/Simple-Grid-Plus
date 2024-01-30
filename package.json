@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "build": "npm-run-all compile process process-min",
-    "compile": "sass ./src/simple-grid.scss ./tmp/simple-grid.css",
+    "build": "npm-run-all compile-default process process-min",
+    "compile-default": "sass ./src/default.scss ./tmp/simple-grid.css",
+    "compile-typography": "sass ./src/with-typography.scss ./tmp/simple-grid.css",
     "process": "lightningcss --browserslist ./tmp/simple-grid.css -o dist/simple-grid.css",
     "process-min": "lightningcss --minify --browserslist ./tmp/simple-grid.css -o dist/simple-grid-min.css"
   },
