@@ -26,7 +26,8 @@ All the code you need is simple and familiar. A parent container class contains 
 </div>
 ```
 
-If you don’t want columns to expand on mobile devices and small screens, simply add `-sm` to the end of your column class name. For example, if you want to have two blocks of content floating side-by-side on small screens, each would be given the class name `.col-6-sm`.
+To control the sizing behavior, you can apply a breakpoint to your column classes (EX: `.col-6-sm`).
+Not specifying a breakpoint is equal to using the medium breakpoint (EX: `.col-6-md`).
 
 ## Utility
 
