@@ -1,10 +1,12 @@
 {
   "scripts": {
-    "build": "npm-run-all compile-default process process-min",
+    "build": "npm-run-all compile-default compile-typography process process-min process-typography process-min-typography",
     "compile-default": "sass ./src/default.scss ./tmp/simple-grid.css",
-    "compile-typography": "sass ./src/with-typography.scss ./tmp/simple-grid.css",
+    "compile-typography": "sass ./src/typography.scss ./tmp/typography.css",
     "process": "lightningcss --browserslist ./tmp/simple-grid.css -o dist/simple-grid.css",
-    "process-min": "lightningcss --minify --browserslist ./tmp/simple-grid.css -o dist/simple-grid-min.css"
+    "process-min": "lightningcss --minify --browserslist ./tmp/simple-grid.css -o dist/simple-grid-min.css",
+    "process-typography": "lightningcss --browserslist ./tmp/simple-grid.css -o dist/typography.css",
+    "process-min-typography": "lightningcss --minify --browserslist ./tmp/typography.css -o dist/typography-min.css"
   },
   "dependencies": {
     "lightningcss-cli": "^1.23.0",
