@@ -1,3 +1,4 @@
+/* Utility */
 .left {
     text-align: left;
 }
@@ -16,14 +17,6 @@
     text-align: justify;
 }
 
-@media only screen and (min-width: $breakpoint-med) {
-    .hidden-sm {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: $breakpoint-large) {
-    .hidden-md {
-        display: none;
-    }
+.hidden-sm {
+    display: none;
 }
