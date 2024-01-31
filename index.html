@@ -33,11 +33,17 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Simple Gid+</h1>
-      <h2 class="project-tagline">A simple and lightweight CSS grid system.</h2>
+      <h2 class="project-tagline">
+        A simple and lightweight CSS grid & positioning system.
+      </h2>
       <a href="https://github.com/HostByBelle/Simple-Grid-Plus" class="btn"
-        >View on GitHub</a>
-      <a href="https://github.com/HostByBelle/Simple-Grid-Plus/releases" class="btn"
-      >Releases</a>
+        >View on GitHub</a
+      >
+      <a
+        href="https://github.com/HostByBelle/Simple-Grid-Plus/releases"
+        class="btn"
+        >Releases</a
+      >
     </section>
 
     <section class="main-content">
@@ -52,18 +58,25 @@
       </h1>
 
       <p>
-        Simple Gid+ provides you with a lightweight (~2KB uncompressed) and
-        responsive CSS grid & utility components for easier front-end
-        development.
+        Simple Gid+ provides you with a lightweight and responsive CSS grid &
+        utility components for easier front-end development. It also includes
+        some utilities for controlling placement of items.
       </p>
 
       <ul class="task-list">
-        <li>Tiny in size (~2KB <strong>uncompressed</strong>).</li>
+        <li>Tiny in size (less than 5KB <strong>uncompressed</strong>).</li>
         <li>Easy to use.</li>
         <li>lightweight, widely compatible.</li>
         <li>Supports nesting.</li>
         <li>Bootstrap-like in syntax.</li>
-        <li>Permissive licensing <a href="https://github.com/HostByBelle/Simple-Grid-Plus/blob/main/LICENSE">(MIT)</a>.</li>
+        <li>Responsive via various size breakpoints.</li>
+        <li>
+          Permissive licensing
+          <a
+            href="https://github.com/HostByBelle/Simple-Grid-Plus/blob/main/LICENSE"
+            >(MIT)</a
+          >.
+        </li>
       </ul>
 
       <div class="grid-example">
@@ -122,55 +135,6 @@
         </div>
       </div>
 
-      <div class="grid-example">
-        <div class="row">
-          <div class="col-3">
-            <p>col-3</p>
-          </div>
-          <div class="col-3">
-            <p>col-3</p>
-          </div>
-          <div class="col-6">
-            <p>col-6</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-example">
-        <div class="row">
-          <div class="col-3">
-            <div class="row">
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="row">
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="row">
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-              <div class="col-6">
-                <p>col-6</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <h2>
         <a
           id="user-content-header-1"
@@ -204,7 +168,23 @@
         &lt;/div&gt;
       </pre>
 
-      <h2>
+      <p>The above code will produce a grid like so:</p>
+
+      <div class="grid-example">
+        <div class="row">
+          <div class="col-3">
+            <p>col-3</p>
+          </div>
+          <div class="col-3">
+            <p>col-3</p>
+          </div>
+          <div class="col-6">
+            <p>col-6</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>
         <a
           id="user-content-header-1"
           class="anchor"
@@ -212,9 +192,12 @@
           aria-hidden="true"
           ><span class="octicon octicon-link"></span></a
         >Grid Nesting
-      </h2>
+      </h3>
 
-      <p>Simple Grid+ fully supports nesting grids as seen above and below.</p>
+      <p>
+        Simple Grid+ fully supports nesting grids within other grids and will do
+        so with no issues.
+      </p>
 
       <pre>
       
@@ -254,11 +237,170 @@
         &lt;/div&gt;
       </pre>
 
+      <p>The above code will produce nested grids like this:</p>
+
+      <div class="grid-example">
+        <div class="row">
+          <div class="col-3">
+            <p>col-3</p>
+            <div class="row">
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <p>col-3</p>
+            <div class="row">
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <p>col-6</p>
+            <div class="row">
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+              <div class="col-6">
+                <p>col-6</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>
+        <a
+          id="user-content-header-1"
+          class="anchor"
+          href="#creating-a-grid"
+          aria-hidden="true"
+          ><span class="octicon octicon-link"></span></a
+        >Automatically Sized Columns
+      </h3>
+
+      <p>
+        Starting with simple Grid+ version 2.0.0 you can now create columns that
+        will automatically resize depending on the available space by using the
+        <code>col</code> class instead of a numbered class.
+      </p>
+
+      <pre>
+        
+        &lt;div class=&quot;grid-example&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+              &lt;!-- This content will take up all of the space not taken up. In this case, 3/4th of the entire row --&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-3&quot;&gt;
+              &lt;!-- This content will take up 3/12 (or 1/4) of the container --&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+
+      <p>This code will result in a grid like this:</p>
+
+      <div class="grid-example">
+        <div class="row">
+          <div class="col">
+            <p>col</p>
+          </div>
+          <div class="col-3">
+            <p>col-3</p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          id="user-content-header-1"
+          class="anchor"
+          href="#migration"
+          aria-hidden="true"
+          ><span class="octicon octicon-link"></span></a
+        >Migration from Simple Grid
+      </h2>
+
+      <p>
+        If you are looking to migrate from the original Simple Grid project you
+        have a few option:
+      </p>
+
+      <ol>
+        <li>Use the v1 release of Simple Grid+</li>
+        <li>Perform a migration to the v2 release of Simple Grid+</li>
+      </ol>
+
+      <h3>
+        <a
+          id="user-content-header-1"
+          class="anchor"
+          href="#migration-option1"
+          aria-hidden="true"
+          ><span class="octicon octicon-link"></span></a
+        >Option 1
+      </h3>
+
+      <p>
+        Option 1 is simplest upgrade path. Simply download the version 1.0.0
+        release and update your existing code to use the new CSS. If you
+        previously were using the typography you should also add in the now
+        seperate typography CSS file.
+      </p>
+
+      <h4>
+        <a
+          id="user-content-header-1"
+          class="anchor"
+          href="#migration-option2"
+          aria-hidden="true"
+          ><span class="octicon octicon-link"></span></a
+        >Option 2
+      </h4>
+
+      <p>
+        To migrate to the current version of Simple Grid+, there are a few
+        changes to note between it and the last release of Simple Grid
+      </p>
+
+      <ul>
+        <li>
+          The breakpoints have been refactored. They now behave like Bootstrap.
+          (<code>col-3-sm</code> will be displayed on a device with a small or
+          larger screen. <code>col-3-xlg</code> will display on an extra large
+          screen or larger)
+        </li>
+        <li>
+          Grids and columns no longer have padding or margin applied to them.
+          You should add spacing to your content instead.
+        </li>
+        <li>The existing utility classes have been removed.</li>
+        <li>Simple Grid+ uses <code>Display: flex;</code>.</li>
+        <li>
+          Rows will now always use 100% of the width available in their parent.
+        </li>
+      </ul>
+
       <footer class="site-footer">
         <span class="site-footer-owner"
-          ><a href="https://github.com/HostByBelle/Simple-Grid-Plus">Simple Grid+</a> is
-          maintained by
-          <a href="https://hostbybelle.com/">HostByBelle</a> and is based on <a href="https://simplegrid.io/">Simple Grid</a> by <a href="https://zcole.me/">Zach Cole</a>.</span
+          ><a href="https://github.com/HostByBelle/Simple-Grid-Plus"
+            >Simple Grid+</a
+          >
+          is maintained by
+          <a href="https://hostbybelle.com/">HostByBelle</a> and is based on
+          <a href="https://simplegrid.io/">Simple Grid</a> by
+          <a href="https://zcole.me/">Zach Cole</a>.</span
         >
       </footer>
     </section>
