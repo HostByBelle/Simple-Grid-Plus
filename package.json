@@ -9,7 +9,7 @@
     "process-min-typography": "lightningcss --minify --browserslist ./build/tmp/typography.css -o ./build/dist/typography-min.css"
   },
   "dependencies": {
-    "lightningcss-cli": "^1.25.1",
+    "lightningcss-cli": "^1.27.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.77.8"
   },
