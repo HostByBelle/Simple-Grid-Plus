@@ -9,9 +9,9 @@
     "process-min-typography": "lightningcss --minify --browserslist ./build/tmp/typography.css -o ./build/dist/typography-min.css"
   },
   "dependencies": {
-    "lightningcss-cli": "^1.28.1",
+    "lightningcss-cli": "^1.30.1",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.80.6"
+    "sass": "^1.89.2"
   },
   "browserslist": [
     "> 1%, last 6 versions, Firefox ESR, not dead"
